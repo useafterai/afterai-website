@@ -2,17 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { FiLogOut } from "react-icons/fi";
+import { FiLogIn } from "react-icons/fi";
+
+const APP_LOGIN_URL = "https://app.useafter.ai/login";
 
 export default function ConsoleComingSoon() {
-  const router = useRouter();
-
-  const handleLogout = async () => {
-    await fetch("/api/session/logout", { method: "POST" });
-    router.push("/console-coming-soon");
-  };
-
   return (
     <div className="min-h-screen bg-dark flex flex-col items-center justify-center px-6">
       <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -30,18 +24,17 @@ export default function ConsoleComingSoon() {
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500 text-xs font-bold mb-6">
           Coming soon
         </div>
-        <h1 className="text-3xl font-bold mb-4">You&apos;re signed in</h1>
+        <h1 className="text-3xl font-bold mb-4">Console preview</h1>
         <p className="text-muted mb-8">
-          Console access is coming soon. We&apos;ll notify you when it&apos;s available.
+          Full console access is coming soon. Sign in to the app to use the dashboard.
         </p>
-        <button
-          type="button"
-          onClick={handleLogout}
+        <Link
+          href={APP_LOGIN_URL}
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/14 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all"
         >
-          <FiLogOut className="w-4 h-4" />
-          Sign out
-        </button>
+          <FiLogIn className="w-4 h-4" />
+          Sign in to the app
+        </Link>
       </div>
     </div>
   );
