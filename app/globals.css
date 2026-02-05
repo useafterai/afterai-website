@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0b12;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel2: rgba(255, 255, 255, 0.08);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --text: #f5f5f7;
+  --muted: rgba(245, 245, 247, 0.72);
+  --muted2: rgba(245, 245, 247, 0.58);
+  --accent: #7b5cff;
+  --accent2: #f6c945;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+}
+
+/* Anchor offset for sticky header (avoid content hiding under nav) */
+[id="product"],
+[id="pricing"],
+[id="cloud"],
+[id="faq"],
+[id="trust"],
+[id="docs"],
+[id="decision-moment"] {
+  scroll-margin-top: 5rem;
+}
+
+/* Pricing accordion: smooth expand/collapse */
+.pricing-expand-content {
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.pricing-chevron svg {
+  transition: transform 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-expand-content,
+  .pricing-chevron svg {
+    transition: none;
+  }
+}
+
+/* FAQ section: collapsible items with custom chevron */
+.faq {
+  --faq-border: rgba(255, 255, 255, 0.1);
+  --faq-bg: rgba(255, 255, 255, 0.04);
+  --faq-bg-open: rgba(255, 255, 255, 0.06);
+}
+
+.faqitem {
+  border: 1px solid var(--faq-border);
+  border-radius: 0.75rem;
+  background: var(--faq-bg);
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.faqitem:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.faqitem[open] {
+  background: var(--faq-bg-open);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.faqitem summary {
+  list-style: none;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.faqitem summary:hover {
+  color: var(--text);
+}
+
+.faqitem summary:focus {
+  outline: none;
+}
+
+.faqitem summary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(246, 201, 69, 0.4);
+  border-radius: 0.75rem;
+}
+
+/* Hide default disclosure triangle */
+.faqitem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqitem summary::after {
+  content: "";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--muted);
+  transition: transform 0.25s ease, border-top-color 0.2s ease;
+}
+
+.faqitem[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+  border-top-color: var(--muted2);
+}
+
+.faq-answer {
+  color: var(--muted);
+  padding: 0.5rem 1.25rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  animation: faq-answer-in 0.25s ease-out;
+}
+
+@keyframes faq-answer-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer {
+    animation: none;
+  }
+  .faqitem summary::after {
+    transition: none;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(18px) translateX(-12px) scale(1.03);
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Section / card enter animation (lightweight) */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 { animation-delay: 0.08s; }
+.animate-fade-in-up-delay-2 { animation-delay: 0.16s; }
+.animate-fade-in-up-delay-3 { animation-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in-up-delay-1,
+  .animate-fade-in-up-delay-2,
+  .animate-fade-in-up-delay-3,
+  .motion-section-heading,
+  .motion-section-content {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Section identity: accent line above heading (entry point) */
+.section-with-anchor .section-heading-anchor {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(246, 201, 69, 0.5), transparent);
+  border-radius: 1px;
+  margin-bottom: 0.75rem;
+}
+
+/* Motion hierarchy: section → heading → content (stagger, short, directional) */
+.motion-section-heading {
+  opacity: 0;
+  animation: fade-in-up 0.4s ease-out forwards;
+  animation-delay: 0.05s;
+}
+
+.motion-section-content {
+  opacity: 0;
+  animation: fade-in-up 0.4s ease-out forwards;
+  animation-delay: 0.12s;
+}
+
+/* Form inputs: visible text, placeholder, caret, focus */
+.input-afterai {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0f0f18;
+  color: #f5f5f7;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  caret-color: #a78bfa;
+}
+.input-afterai::placeholder {
+  color: rgba(245, 245, 247, 0.45);
+}
+.input-afterai:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.input-afterai:focus {
+  border-color: rgba(123, 92, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(123, 92, 255, 0.2);
+}
+select.input-afterai {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+.input-afterai.input-afterai--error {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+.input-afterai.input-afterai--error:focus {
+  border-color: rgba(239, 68, 68, 0.8);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+.input-afterai-error-text {
+  color: rgba(239, 68, 68, 0.95);
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+}
+
+/* Bento card: no hover animation (Decision moment section) */
+
+/* Decision carousel: scroll-snap mobile + desktop */
+.decision-carousel {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+.decision-carousel .decision-carousel-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decision-carousel {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+}
