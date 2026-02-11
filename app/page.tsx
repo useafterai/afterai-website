@@ -46,10 +46,10 @@ export default function LandingPage() {
               <span>Monitor available now · More plans coming soon</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Production AI changes<br />require evidence.
+              Advance your AI agents — backed by evidence.
             </h1>
             <p className="text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-              AfterAI gives platform teams upgrade risk, change visibility, and a defensible decision trail — without touching the inference path.
+              AfterAI surfaces change risk and captures a defensible record for every decision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -73,7 +73,7 @@ export default function LandingPage() {
         <section className="border-t border-white/8 bg-white/[0.02]">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Upgrades shouldn&apos;t be a leap of faith — neither should deciding not to upgrade.</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Changes shouldn&apos;t be a leap of faith — neither should deciding not to change.</h2>
             <div className="motion-section-content space-y-4">
               <p className="text-muted leading-relaxed max-w-3xl">
                 Every model swap, prompt change, or decision to hold is a production decision.
