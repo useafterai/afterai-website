@@ -17,7 +17,7 @@ export default function SecurityPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Architecture and data</h2>
           <p className="text-muted mb-4">
-            AfterAI is out-of-band by design. It does not sit in your inference path; there is no inference-path instrumentation and no production traffic in the hot path. Telemetry is asynchronous and designed to fail open. The system is metadata-first; prompt and output capture is optional, sampled, and controllable. Change and risk are captured out-of-band with zero impact on latency.
+            AfterAI is out-of-band by design. It does not sit in your inference path; there is no inference-path instrumentation and no traffic in the hot path. Telemetry is asynchronous and designed to fail open. The system is metadata-first; prompt and output capture is optional, sampled, and controllable. Change and risk are captured out-of-band with zero impact on latency.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Operational security</h2>

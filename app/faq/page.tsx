@@ -50,7 +50,7 @@ export default function FAQPage() {
           <details className="faqitem">
             <summary>Does AfterAI sit in the inference path?</summary>
             <div className="faq-answer">
-              No. AfterAI is completely out-of-band. It does not proxy traffic, route requests, or block production calls. Telemetry is asynchronous and designed to fail open.
+              No. AfterAI is completely out-of-band. It does not proxy traffic, route requests, or block inference calls. Telemetry is asynchronous and designed to fail open.
             </div>
           </details>
           <details className="faqitem">
@@ -68,13 +68,13 @@ export default function FAQPage() {
           <details className="faqitem">
             <summary>What is AfterAI not?</summary>
             <div className="faq-answer">
-              AfterAI is not inference-path instrumentation — we never sit in front of your inference. It is not production traffic logging; evaluations are controlled and offline only. It is not request-level observability or telemetry. It is not prompt tuning, routing, or automatic model switching. It is not a compliance tool that shows up after decisions are already made. AfterAI uses controlled, offline evaluations only and exists at the decision moment — when a change is proposed (or drift is detected and you choose not to act) and someone has to say yes or no.
+              AfterAI is not inference-path instrumentation — we never sit in front of your inference. It is not hot-path traffic logging; evaluations are controlled and offline only. It is not request-level observability or telemetry. It is not prompt tuning, routing, or automatic model switching. It is not a compliance tool that shows up after decisions are already made. AfterAI uses controlled, offline evaluations only and exists at the decision moment — when a change is proposed (or drift is detected and you choose not to act) and someone has to say yes or no.
             </div>
           </details>
           <details className="faqitem">
             <summary>Can AfterAI automatically block or roll back changes?</summary>
             <div className="faq-answer">
-              No. AfterAI never takes action in production. It produces evidence and decision options — humans remain accountable.
+              No. AfterAI never takes action automatically. It produces evidence and decision options — humans remain accountable.
             </div>
           </details>
           <details className="faqitem">

@@ -46,10 +46,10 @@ export default function LandingPage() {
               <span>Monitor available now · More plans coming soon</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Advance your AI agent. Backed by evidence.
+              Advance your AI Agent with evidence
             </h1>
             <p className="text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-              AfterAI surfaces change risk and captures a defensible record for every decision. AfterAI tracks AI agents across environments.
+              AfterAI surfaces change risk for your AI Agents and captures a defensible record for every decision.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -76,7 +76,7 @@ export default function LandingPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Changes shouldn&apos;t be a leap of faith — neither should deciding not to change.</h2>
             <div className="motion-section-content space-y-4">
               <p className="text-muted leading-relaxed max-w-3xl">
-                Every model swap, prompt change, or decision to hold is a production decision.
+                Every model swap, prompt change, or decision to hold carries risk.
               </p>
               <p className="text-muted leading-relaxed max-w-3xl">
                 Without evidence, you&apos;re guessing on risk.
@@ -85,7 +85,7 @@ export default function LandingPage() {
                 AfterAI turns AI change — and no-change — into measurable upgrade risk and a durable decision trail, so platform teams and leadership can move or deliberately not move with confidence.
               </p>
               <p className="text-sm text-muted2 italic max-w-2xl">
-                With faster model releases, provider deprecations, and agentic systems in production, AI change is continuous — but approvals, deferrals, and accountability haven&apos;t caught up.
+                With faster model releases, provider deprecations, and agentic systems, AI change is continuous — but approvals, deferrals, and accountability haven&apos;t caught up.
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function LandingPage() {
         <section className="border-t border-white/8">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 motion-section-heading">Built for platform teams who own AI in production.</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 motion-section-heading">Built for platform teams who own AI.</h2>
             <div className="motion-section-content">
             <ul className="space-y-3 text-muted max-w-2xl mb-4">
               <li className="flex items-start gap-2">
@@ -111,7 +111,7 @@ export default function LandingPage() {
                 <span>Organizations that need a clear, defensible answer when leadership asks what changed and why.</span>
               </li>
             </ul>
-            <p className="text-sm text-muted2">If you don&apos;t run AI in production, this probably isn&apos;t for you.</p>
+            <p className="text-sm text-muted2">If you don&apos;t run AI agents, this probably isn&apos;t for you.</p>
             </div>
           </div>
         </section>
@@ -123,7 +123,7 @@ export default function LandingPage() {
             <div className="motion-section-heading mb-10">
               <h2 className="text-2xl md:text-3xl font-bold mb-3">The decision moment</h2>
               <p className="text-muted leading-relaxed max-w-2xl">
-                Every production AI change — or decision not to change — eventually reaches a point where someone must act. AfterAI is built for that moment: from pre-decision signals to durable records.
+                Every AI change — or decision not to change — eventually reaches a point where someone must act. AfterAI is built for that moment: from pre-decision signals to durable records.
               </p>
             </div>
             {/* 3-step carousel: ACE, AURA, PACR | AIS as transversal */}
@@ -136,14 +136,14 @@ export default function LandingPage() {
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 md:p-12">
-            <h2 className="text-2xl font-bold mb-4 motion-section-heading">Built for production, not your hot path.</h2>
+            <h2 className="text-2xl font-bold mb-4 motion-section-heading">Built for evidence, not your hot path.</h2>
             <div className="motion-section-content">
             <p className="text-muted leading-relaxed mb-8 max-w-2xl">
-              AfterAI uses confidence-weighted deltas, works with any provider, and never sits in front of your inference. No inference-path instrumentation, no production traffic logging — controlled, offline evaluations only. Capture change and risk out-of-band; zero impact on latency.
+              AfterAI uses confidence-weighted deltas, works with any provider, and never sits in front of your inference. No inference-path instrumentation, no hot-path traffic logging — controlled, offline evaluations only. Capture change and risk out-of-band; zero impact on latency.
             </p>
             <div className="flex flex-col sm:flex-row md:flex-wrap gap-4 mb-10">
               <PillItem label="No inference-path instrumentation" desc="Never in front of your inference" />
-              <PillItem label="No production traffic logging" desc="Controlled, offline evaluations only" />
+              <PillItem label="No hot-path traffic logging" desc="Controlled, offline evaluations only" />
               <PillItem label="Provider-neutral, out-of-band" desc="Fail-open; no proxy, no routing" />
             </div>
             <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
@@ -221,7 +221,7 @@ export default function LandingPage() {
               <details className="faqitem">
                 <summary>Does AfterAI sit in the inference path?</summary>
                 <div className="faq-answer">
-                  No. AfterAI is completely out-of-band. It does not proxy traffic, route requests, or block production calls. Telemetry is asynchronous and designed to fail open.
+                  No. AfterAI is completely out-of-band. It does not proxy traffic, route requests, or block inference calls. Telemetry is asynchronous and designed to fail open.
                 </div>
               </details>
               <details className="faqitem">
@@ -277,7 +277,7 @@ export default function LandingPage() {
         <section id="security" className="border-t border-white/8 bg-white/[0.02]">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Security built for production.</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Security built for teams.</h2>
             <div className="motion-section-content">
             <p className="text-muted leading-relaxed mb-4 max-w-2xl">
               The same authentication and access model applies whether you use the console, the API, or the SDK. We&apos;re built for teams who need a defensible, audit-friendly posture.
