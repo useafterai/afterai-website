@@ -49,7 +49,7 @@ export default function LandingPage() {
               Advance your AI agent. Backed by evidence.
             </h1>
             <p className="text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-              AfterAI surfaces change risk and captures a defensible record for every decision. AfterAI tracks AI systems — including AI agents — across environments.
+              AfterAI surfaces change risk and captures a defensible record for every decision. AfterAI tracks AI agents across environments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link

@@ -186,7 +186,7 @@ export default function PricingSection() {
               id="monitor"
               title="Monitor"
               price="$0 / month"
-              tagline="See AI systems change early."
+              tagline="See AI agents change early."
               bullets={[
                 "Non-production environments only.",
                 "Unlimited AI Indicator Signals (AIS)",
@@ -199,7 +199,7 @@ export default function PricingSection() {
                   items: [
                     "10 ACE events / month",
                     "Unlimited AIS signals",
-                    "1 AI system",
+                    "1 AI agent",
                   ],
                 },
                 {
@@ -250,7 +250,7 @@ export default function PricingSection() {
                   items: [
                     "30 ACEs / month",
                     "Unlimited AIS signals",
-                    "Up to 3 AI systems",
+                    "Up to 3 AI agents",
                   ],
                 },
                 {
@@ -305,7 +305,7 @@ export default function PricingSection() {
                   items: [
                     "400 ACEs / month",
                     "80 AURA runs / month",
-                    "Up to 20 AI systems",
+                    "Up to 20 AI agents",
                   ],
                 },
                 {
