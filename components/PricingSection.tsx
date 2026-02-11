@@ -43,6 +43,7 @@ function PricingCardInner({
   ctaHref,
   ctaDisabled,
   featured,
+  envPill,
 }: {
   id: CardId;
   title: string;
@@ -57,6 +58,7 @@ function PricingCardInner({
   ctaHref?: string;
   ctaDisabled?: boolean;
   featured?: boolean;
+  envPill?: "non-prod" | "prod and non-prod";
 }) {
   const panelId = `pricing-details-${id}`;
   const isOpen = expanded;
@@ -71,11 +73,18 @@ function PricingCardInner({
     >
       <div className="flex items-start justify-between gap-2 mb-1">
         <h3 className="font-bold text-xl">{title}</h3>
-        {featured && (
-          <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500 flex-shrink-0">
-            Available now
-          </span>
-        )}
+        <div className="flex flex-col gap-1.5 items-end flex-shrink-0">
+          {featured && (
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500">
+              Available now
+            </span>
+          )}
+          {envPill && (
+            <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-400">
+              {envPill}
+            </span>
+          )}
+        </div>
       </div>
       <div className="mb-2">
         <span className="text-3xl font-bold">{price}</span>
@@ -187,8 +196,8 @@ export default function PricingSection() {
               title="Monitor"
               price="$0 / month"
               tagline="See AI agents change early."
+              envPill="non-prod"
               bullets={[
-                "Non-production environments only.",
                 "Unlimited AI Indicator Signals (AIS)",
                 "Light AI change visibility",
                 "1 Lite AURA / month",
@@ -231,6 +240,7 @@ export default function PricingSection() {
               title="Assess"
               price="$250 / month"
               tagline="Evaluate AI changes before they ship."
+              envPill="prod and non-prod"
               bullets={[
                 "Everything in Monitor, plus",
                 "Up to 6 AURAs / month",
@@ -278,6 +288,7 @@ export default function PricingSection() {
               price="Custom"
               priceSubline="Typically starts at $4,500 / month"
               tagline="Make AI decisions defensible."
+              envPill="prod and non-prod"
               bullets={[
                 "Everything in Assess, plus",
                 "Immutable PACRs + approvals",
