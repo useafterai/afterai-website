@@ -46,7 +46,7 @@ export default function LandingPage() {
               <span>Monitor available now · More plans coming soon</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Advance your AI agents — backed by evidence.
+              Advance your AI agent. Backed by evidence.
             </h1>
             <p className="text-xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
               AfterAI surfaces change risk and captures a defensible record for every decision.
