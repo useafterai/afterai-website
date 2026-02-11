@@ -111,7 +111,6 @@ export default function LandingPage() {
                 <span>Organizations that need a clear, defensible answer when leadership asks what changed and why.</span>
               </li>
             </ul>
-            <p className="text-sm text-muted2">If you don&apos;t run AI agents, this probably isn&apos;t for you.</p>
             </div>
           </div>
         </section>
