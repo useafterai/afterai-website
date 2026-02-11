@@ -188,6 +188,7 @@ export default function PricingSection() {
               price="$0 / month"
               tagline="See AI systems change early."
               bullets={[
+                "Non-production environments only.",
                 "Unlimited AI Indicator Signals (AIS)",
                 "Light AI change visibility",
                 "1 Lite AURA / month",

@@ -60,7 +60,7 @@ export default function PricingPage() {
           <section>
             <h2 className="text-xs font-semibold uppercase tracking-wider text-white/80 mb-4">Tier summary</h2>
             <ul className="space-y-3 list-disc list-inside">
-              <li><strong className="text-white/90">Monitor (Free):</strong> $0/month. Unlimited AIS, light AI change visibility, 1 Lite AURA/month. Usage: 10 ACE events/month, 1 AI system. Evaluation: 1 AURA/month (lite depth, not exportable). Add-on: Full AURA $99 one-time/month (not exportable). Email support.</li>
+              <li><strong className="text-white/90">Monitor (Free):</strong> $0/month. Non-production environments only. Unlimited AIS, light AI change visibility, 1 Lite AURA/month. Usage: 10 ACE events/month, 1 AI system. Evaluation: 1 AURA/month (lite depth, not exportable). Add-on: Full AURA $99 one-time/month (not exportable). Email support.</li>
               <li><strong className="text-white/90">Assess ($250/month):</strong> Everything in Monitor, plus up to 6 AURAs/month, exportable results + advanced analytics. 30 ACEs/month, unlimited AIS, up to 3 AI systems. 6 full-depth AURA assessments/month, exportable (PDF/JSON), historical comparisons + baselines. SSO, RBAC, audit log 7–14 days. Priority support.</li>
               <li><strong className="text-white/90">Enterprise (Custom):</strong> Typically starts at $4,500/month. Everything in Assess, plus immutable PACRs + approvals, enterprise security & controls. 400 ACEs/month, 80 AURA runs/month, up to 20 AI systems. Immutable PACRs, approval metadata, retention policies. Single-tenant, BYOK, full audit logs. Custom integrations, SLA / dedicated support.</li>
             </ul>
@@ -71,7 +71,7 @@ export default function PricingPage() {
             <div className="rounded-xl border border-white/10 bg-white/[0.04] p-6 space-y-6">
               <div>
                 <h3 className="font-semibold text-white/90 mb-2">Monitor (Free)</h3>
-                <p className="text-muted text-sm mb-2">$0/month. Unlimited AI Indicator Signals (AIS), light AI change visibility, 1 Lite AURA/month. Usage & limits: 10 ACE events/month, unlimited AIS signals, 1 AI system. Evaluation: 1 AURA/month (lite depth, not exportable). Add-ons: Full AURA $99 one-time/month (not exportable). Email support.</p>
+                <p className="text-muted text-sm mb-2">$0/month. Non-production environments only. Unlimited AI Indicator Signals (AIS), light AI change visibility, 1 Lite AURA/month. Usage & limits: 10 ACE events/month, unlimited AIS signals, 1 AI system. Evaluation: 1 AURA/month (lite depth, not exportable). Add-ons: Full AURA $99 one-time/month (not exportable). Email support.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-white/90 mb-2">Assess ($250/month)</h3>
