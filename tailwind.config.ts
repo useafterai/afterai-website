@@ -37,7 +37,7 @@ const config: Config = {
           900: "#164e63",
         },
         dark: {
-          DEFAULT: "#f8fafc",
+          DEFAULT: "#f1f5f9",
           panel: "rgba(0,0,0,0.04)",
           panel2: "rgba(0,0,0,0.06)",
           stroke: "rgba(0,0,0,0.10)",

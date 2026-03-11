@@ -70,7 +70,7 @@ export default function LandingPage() {
         </section>
 
         {/* 2. Problem framing */}
-        <section className="border-t border-slate-200 bg-slate-50">
+        <section className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Changes shouldn&apos;t be a leap of faith — neither should deciding not to change.</h2>
@@ -116,7 +116,7 @@ export default function LandingPage() {
         </section>
 
         {/* 4. Canonical flow — AIS → ACE → AURA → PACR */}
-        <section id="decision-moment" className="border-t border-slate-200 bg-slate-50">
+        <section id="decision-moment" className="border-t border-slate-200 bg-white">
           <div className="max-w-6xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <div className="motion-section-heading mb-10">
@@ -131,7 +131,7 @@ export default function LandingPage() {
         </section>
 
         {/* 5. How it works / architecture */}
-        <section id="docs" className="border-t border-slate-200 bg-slate-50">
+        <section id="docs" className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
           <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm">
@@ -174,7 +174,7 @@ export default function LandingPage() {
         <PricingSection />
 
         {/* Cloud — Azure, AWS, GCP blurb + link to /cloud */}
-        <section id="cloud" className="border-t border-slate-200 bg-slate-50">
+        <section id="cloud" className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-3 motion-section-heading">One platform for Azure, AWS, and GCP.</h2>
@@ -200,7 +200,7 @@ export default function LandingPage() {
         </section>
 
         {/* FAQ — first 4 + Why DIY + link to full FAQ */}
-        <section id="faq" className="border-t border-slate-200 bg-slate-50">
+        <section id="faq" className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-8 motion-section-heading">FAQ</h2>
@@ -245,7 +245,7 @@ export default function LandingPage() {
         </section>
 
         {/* 8. Trust & coming-soon */}
-        <section id="trust" className="border-t border-slate-200 bg-slate-50">
+        <section id="trust" className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl font-bold mb-4 motion-section-heading">Early access, real product.</h2>
@@ -273,7 +273,7 @@ export default function LandingPage() {
         </section>
 
         {/* Security */}
-        <section id="security" className="border-t border-slate-200 bg-slate-50">
+        <section id="security" className="border-t border-slate-200 bg-white">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Security built for teams.</h2>
