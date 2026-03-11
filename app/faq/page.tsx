@@ -4,21 +4,17 @@ import Image from "next/image";
 export default function FAQPage() {
   return (
     <div className="min-h-screen bg-dark">
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'180\' height=\'180\' filter=\'url(%23n)\' opacity=\'.22\'/%3E%3C/svg%3E')] opacity-20 mix-blend-overlay rotate-12" />
-      </div>
-
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-dark/55 border-b border-white/8">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
             <span className="text-xl font-bold">AfterAI</span>
           </Link>
           <div className="flex items-center gap-6">
-            <Link href="/#faq" className="text-muted hover:text-white transition-colors text-sm">
+            <Link href="/#faq" className="text-muted hover:text-slate-900 transition-colors text-sm">
               FAQ on home
             </Link>
-            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-semibold hover:shadow-lg transition-all text-sm">
+            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-semibold hover:shadow-lg transition-all text-sm">
               Get started
             </Link>
           </div>
@@ -26,12 +22,12 @@ export default function FAQPage() {
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-16 md:py-20">
-        <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-white text-sm mb-8 transition-colors">
+        <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-slate-900 text-sm mb-8 transition-colors">
           ← Back to home
         </Link>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Frequently asked questions</h1>
         <p className="text-muted mb-12">
-          Full list of FAQs. See also <Link href="/pricing" className="text-gold-500 hover:underline">pricing specifications</Link>.
+          Full list of FAQs. See also <Link href="/pricing" className="text-gold-600 hover:underline">pricing specifications</Link>.
         </p>
 
         <div className="faq space-y-3">
@@ -122,7 +118,7 @@ export default function FAQPage() {
         </div>
       </main>
 
-      <footer className="border-t border-white/8 py-8 mt-16">
+      <footer className="border-t border-slate-200 py-8 mt-16">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-center text-sm text-muted2">
           <span>© {new Date().getFullYear()} AfterAI</span>
         </div>

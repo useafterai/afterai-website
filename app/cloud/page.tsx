@@ -11,27 +11,23 @@ export const metadata = {
 export default function CloudPage() {
   return (
     <div className="min-h-screen bg-dark">
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'180\' height=\'180\' filter=\'url(%23n)\' opacity=\'.22\'/%3E%3C/svg%3E')] opacity-20 mix-blend-overlay rotate-12" />
-      </div>
-
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-dark/55 border-b border-white/8">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
             <span className="text-xl font-bold">AfterAI</span>
           </Link>
           <div className="flex items-center gap-6">
-            <Link href="/#product" className="text-muted hover:text-white transition-colors text-sm">
+            <Link href="/#product" className="text-muted hover:text-slate-900 transition-colors text-sm">
               Product
             </Link>
-            <Link href="/#pricing" className="text-muted hover:text-white transition-colors text-sm">
+            <Link href="/#pricing" className="text-muted hover:text-slate-900 transition-colors text-sm">
               Pricing
             </Link>
-            <Link href="/cloud" className="text-gold-500 font-medium text-sm">
+            <Link href="/cloud" className="text-gold-600 font-medium text-sm">
               Cloud
             </Link>
-            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-semibold hover:shadow-lg transition-all text-sm">
+            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-semibold hover:shadow-lg transition-all text-sm">
               Get started
             </Link>
           </div>
@@ -39,7 +35,7 @@ export default function CloudPage() {
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-16 md:py-24">
-        <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-white text-sm mb-10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+        <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-slate-900 text-sm mb-10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
           ← Back to home
         </Link>
 
@@ -55,7 +51,7 @@ export default function CloudPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/signup"
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all inline-flex items-center gap-2"
             >
               Get started
               <FiArrowRight />
@@ -64,7 +60,7 @@ export default function CloudPage() {
               href="https://github.com/useafterai/afterai-exporters/blob/main/docs/csp-quickstart.md"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl border border-white/16 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all inline-flex items-center gap-2"
+              className="px-6 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all inline-flex items-center gap-2"
             >
               CSP quickstart
             </a>
@@ -72,7 +68,7 @@ export default function CloudPage() {
         </section>
 
         {/* Supported providers — logos + one line each */}
-        <section className="border-t border-white/8 pt-16 pb-12">
+        <section className="border-t border-slate-200 pt-16 pb-12">
           <div className="section-heading-anchor mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Supported cloud providers</h2>
           <p className="text-muted mb-10 max-w-2xl">
@@ -104,7 +100,7 @@ export default function CloudPage() {
         </section>
 
         {/* Messaging angles */}
-        <section className="border-t border-white/8 py-16">
+        <section className="border-t border-slate-200 py-16">
           <div className="section-heading-anchor mb-4" />
           <h2 className="text-2xl md:text-3xl font-bold mb-10">Why multi-cloud provenance matters</h2>
           <div className="space-y-8">
@@ -124,7 +120,7 @@ export default function CloudPage() {
         </section>
 
         {/* Flow + CTA */}
-        <section className="border-t border-white/8 py-16">
+        <section className="border-t border-slate-200 py-16">
           <div className="section-heading-anchor mb-4" />
           <h2 className="text-2xl font-bold mb-4">Simple flow</h2>
           <ul className="space-y-3 text-muted mb-8 max-w-2xl">
@@ -146,12 +142,12 @@ export default function CloudPage() {
             </li>
           </ul>
           <p className="text-sm text-muted2 mb-6">
-            Documented in the <strong className="text-white/80">CSP quickstart</strong> (who fills source, runner vs exporter) and <strong className="text-white/80">csp-provenance.md</strong> (canonical source schema and examples). <strong className="text-white/80">providers.md</strong> lists Azure Monitor, AWS CloudWatch, and GCP Monitoring as implemented with links to each package README.
+            Documented in the <strong className="text-slate-700">CSP quickstart</strong> (who fills source, runner vs exporter) and <strong className="text-slate-700">csp-provenance.md</strong> (canonical source schema and examples). <strong className="text-slate-700">providers.md</strong> lists Azure Monitor, AWS CloudWatch, and GCP Monitoring as implemented with links to each package README.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/signup"
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-bold hover:shadow-lg transition-all"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all"
             >
               Get started free
             </Link>
@@ -159,7 +155,7 @@ export default function CloudPage() {
               href="https://github.com/useafterai/afterai-exporters"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-xl border border-white/16 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all"
+              className="px-6 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all"
             >
               afterai-exporters on GitHub
             </a>
@@ -167,20 +163,20 @@ export default function CloudPage() {
         </section>
       </main>
 
-      <footer className="border-t border-white/8 py-8 mt-16">
+      <footer className="border-t border-slate-200 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-muted2">
           <span>© {new Date().getFullYear()} AfterAI</span>
           <div className="flex items-center gap-6">
-            <Link href="/cloud" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+            <Link href="/cloud" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
               Cloud
             </Link>
-            <Link href="/security" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+            <Link href="/security" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
               Security
             </Link>
-            <Link href="/privacy" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+            <Link href="/privacy" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+            <Link href="/terms" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
               Terms
             </Link>
           </div>
@@ -204,7 +200,7 @@ function ProviderCard({
   detail: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 flex flex-col">
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow">
       <div className="h-12 w-full flex items-center justify-center mb-4 shrink-0">
         <Image
           src={logoSrc}
@@ -215,8 +211,8 @@ function ProviderCard({
           sizes="(max-width: 640px) 100vw, 33vw"
         />
       </div>
-      <h3 className="text-lg font-semibold text-white mb-1">{name}</h3>
-      <p className="text-sm text-gold-500 mb-3">{telemetry}</p>
+      <h3 className="text-lg font-semibold text-slate-900 mb-1">{name}</h3>
+      <p className="text-sm text-gold-600 mb-3">{telemetry}</p>
       <p className="text-sm text-muted2 mt-auto">{detail}</p>
     </div>
   );
@@ -224,8 +220,8 @@ function ProviderCard({
 
 function AngleBlock({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-xl border border-white/8 bg-white/[0.04] p-6">
-      <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="text-lg font-semibold text-slate-900 mb-2">{title}</h3>
       <p className="text-muted leading-relaxed">{body}</p>
     </div>
   );

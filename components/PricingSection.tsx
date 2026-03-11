@@ -14,13 +14,13 @@ type ExpandGroup = {
 function ExpandGroupBlock({ heading, items }: ExpandGroup) {
   return (
     <div className="mb-4 last:mb-0">
-      <h4 className="text-[11px] font-semibold uppercase tracking-wider text-white/80 mb-2">
+      <h4 className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 mb-2">
         {heading}
       </h4>
       <ul className="space-y-1.5">
         {items.map((item) => (
           <li key={item} className="flex items-start gap-2 text-xs text-muted2">
-            <FiCheck className="mt-0.5 text-gold-500/80 flex-shrink-0 w-3.5 h-3.5" />
+            <FiCheck className="mt-0.5 text-gold-500 flex-shrink-0 w-3.5 h-3.5" />
             <span>{item}</span>
           </li>
         ))}
@@ -67,20 +67,20 @@ function PricingCardInner({
     <div
       className={`flex h-full flex-col p-6 rounded-xl border transition-all duration-200 ${
         featured
-          ? "border-gold-500/30 bg-gradient-to-b from-white/10 to-white/5 hover:border-gold-500/40"
-          : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/[0.07]"
+          ? "border-gold-400/40 bg-gradient-to-b from-sky-50 to-white shadow-sm hover:border-gold-400/60 hover:shadow-md"
+          : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-sm"
       }`}
     >
       <div className="flex items-start justify-between gap-2 mb-1">
         <h3 className="font-bold text-xl">{title}</h3>
         <div className="flex flex-col gap-1.5 items-end flex-shrink-0">
           {featured && (
-            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500">
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full border border-gold-400/30 bg-gold-50 text-gold-600">
               Available now
             </span>
           )}
           {envPill && (
-            <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-400">
+            <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full border border-purple-300/50 bg-purple-50 text-purple-600">
               {envPill}
             </span>
           )}
@@ -110,7 +110,7 @@ function PricingCardInner({
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="pricing-chevron flex items-center gap-2 text-xs font-medium text-muted2 hover:text-white transition-colors mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded"
+        className="pricing-chevron flex items-center gap-2 text-xs font-medium text-muted2 hover:text-slate-900 transition-colors mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded"
       >
         See technical limits
         <FiChevronDown
@@ -131,7 +131,7 @@ function PricingCardInner({
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <div className="pt-4 border-t border-white/10 space-y-4 opacity-100 transition-opacity duration-200">
+          <div className="pt-4 border-t border-slate-200 space-y-4 opacity-100 transition-opacity duration-200">
             {expandedGroups.map((g) => (
               <ExpandGroupBlock
                 key={g.heading}
@@ -144,13 +144,13 @@ function PricingCardInner({
       </div>
 
       {/* CTA — static, always at bottom */}
-      <div className="mt-6 pt-4 border-t border-white/8 flex flex-col flex-1 justify-end">
+      <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col flex-1 justify-end">
         <div className="w-full min-h-[48px] flex items-center justify-center rounded-lg">
           {ctaDisabled ? (
             <button
               type="button"
               disabled
-              className="w-full min-h-[48px] flex items-center justify-center px-4 rounded-lg border border-dashed border-white/12 bg-white/[0.03] text-muted2 font-semibold text-[15px] cursor-not-allowed opacity-90"
+              className="w-full min-h-[48px] flex items-center justify-center px-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 text-muted2 font-semibold text-[15px] cursor-not-allowed opacity-90"
               aria-disabled="true"
             >
               {ctaLabel}
@@ -158,7 +158,7 @@ function PricingCardInner({
           ) : ctaHref ? (
             <Link
               href={ctaHref}
-              className="w-full min-h-[48px] flex items-center justify-center px-4 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-semibold text-[15px] hover:shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-dark"
+              className="w-full min-h-[48px] flex items-center justify-center px-4 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-semibold text-[15px] hover:shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               {ctaLabel}
             </Link>
@@ -177,10 +177,10 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="border-t border-white/8">
+    <section id="pricing" className="border-t border-slate-200">
       <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
         <span className="section-heading-anchor" aria-hidden="true" />
-        <div className="p-8 rounded-2xl border border-white/14 bg-gradient-to-b from-white/8 to-white/4 backdrop-blur-xl">
+        <div className="p-8 rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white shadow-sm">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 motion-section-heading">
               Start decision-grade AI change intelligence for free.
@@ -337,7 +337,7 @@ export default function PricingSection() {
           <p className="mt-6 text-center">
             <Link
               href="/pricing"
-              className="text-sm font-medium text-gold-500 hover:text-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded"
+              className="text-sm font-medium text-gold-600 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded"
             >
               View full pricing specifications →
             </Link>

@@ -64,16 +64,15 @@ export default function SignupPage() {
         <div className="absolute inset-0 bg-dark" />
         <div className="absolute left-0 top-0 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-gold-500/8 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'180\' height=\'180\' filter=\'url(%23n)\' opacity=\'.08\'/%3E%3C/svg%3E')] opacity-50 mix-blend-overlay" />
       </div>
 
-      <header className="border-b border-white/8 bg-dark/80 backdrop-blur-md">
+      <header className="border-b border-slate-200 bg-white/80 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
             <span className="text-xl font-bold">AfterAI</span>
           </Link>
-          <Link href="https://app.useafter.ai/login" className="text-sm text-muted hover:text-white transition-colors">
+          <Link href="https://app.useafter.ai/login" className="text-sm text-muted hover:text-slate-900 transition-colors">
             Sign in
           </Link>
         </div>
@@ -81,18 +80,18 @@ export default function SignupPage() {
 
       <main className="flex-1 flex flex-col items-center justify-center px-6 py-12 md:py-16">
         <div className="w-full max-w-[400px]">
-          <div className="relative pl-5 py-8 pr-8 rounded-2xl border border-white/10 bg-white/[0.04]">
+          <div className="relative pl-5 py-8 pr-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
             <div className="absolute left-0 top-8 bottom-8 w-1 rounded-full bg-gradient-to-b from-purple-500/60 to-gold-500/40" />
 
             {success ? (
               <div className="space-y-6">
                 <h1 className="text-xl font-bold">Check your email</h1>
                 <p className="text-muted text-sm leading-relaxed">
-                  We sent a verification link to <span className="text-white font-medium">{formData.email}</span>. Click it to verify your account and get your API key.
+                  We sent a verification link to <span className="text-slate-900 font-medium">{formData.email}</span>. Click it to verify your account and get your API key.
                 </p>
                 <p className="text-muted text-sm">
                   Already verified?{" "}
-                  <Link href="https://app.useafter.ai/login" className="text-purple-400 hover:text-purple-300 font-semibold">
+                  <Link href="https://app.useafter.ai/login" className="text-purple-500 hover:text-purple-600 font-semibold">
                     Sign in
                   </Link>
                 </p>
@@ -105,7 +104,7 @@ export default function SignupPage() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-xs font-semibold text-muted2 uppercase tracking-wider mb-1.5">
-                      Username <span className="text-white/60">(required)</span>
+                      Username <span className="text-slate-400">(required)</span>
                     </label>
                     <input
                       type="text"
@@ -121,7 +120,7 @@ export default function SignupPage() {
 
                   <div>
                     <label className="block text-xs font-semibold text-muted2 uppercase tracking-wider mb-1.5">
-                      Email <span className="text-white/60">(required)</span>
+                      Email <span className="text-slate-400">(required)</span>
                     </label>
                     <input
                       type="email"
@@ -136,7 +135,7 @@ export default function SignupPage() {
 
                   <div>
                     <label className="block text-xs font-semibold text-muted2 uppercase tracking-wider mb-1.5">
-                      Password <span className="text-white/60">(required)</span>
+                      Password <span className="text-slate-400">(required)</span>
                     </label>
                     <input
                       type="password"
@@ -152,7 +151,7 @@ export default function SignupPage() {
 
                   <div>
                     <label className="block text-xs font-semibold text-muted2 uppercase tracking-wider mb-1.5">
-                      Full name <span className="text-white/50">(optional)</span>
+                      Full name <span className="text-slate-400">(optional)</span>
                     </label>
                     <input
                       type="text"
@@ -173,7 +172,7 @@ export default function SignupPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full mt-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-[#0b0b12] font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full mt-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? "Creating account…" : "Sign Up"}
                     {!isSubmitting && <FiArrowRight />}
@@ -182,7 +181,7 @@ export default function SignupPage() {
 
                 <p className="mt-6 text-center text-sm text-muted2">
                   Already have an account?{" "}
-                  <Link href="https://app.useafter.ai/login" className="text-purple-400 hover:text-purple-300 font-semibold">
+                  <Link href="https://app.useafter.ai/login" className="text-purple-500 hover:text-purple-600 font-semibold">
                     Sign in
                   </Link>
                 </p>

@@ -5,7 +5,7 @@ export default function SecurityPage() {
     <div className="min-h-screen bg-dark p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Security</h1>
-        <div className="prose prose-invert max-w-none">
+        <div className="prose max-w-none">
           <p className="text-muted mb-6">
             AfterAI is built for platform teams who need auditability and a defensible posture. The same security model applies whether you use the console, the API, or the SDK.
           </p>
@@ -27,11 +27,11 @@ export default function SecurityPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Related</h2>
           <p className="text-muted mb-6">
-            <Link href="/" className="text-gold-500 hover:text-gold-400 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Product</Link>
+            <Link href="/" className="text-gold-600 hover:text-gold-700 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Product</Link>
             {" · "}
-            <Link href="/privacy" className="text-gold-500 hover:text-gold-400 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Privacy</Link>
+            <Link href="/privacy" className="text-gold-600 hover:text-gold-700 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Privacy</Link>
             {" · "}
-            <Link href="/terms" className="text-gold-500 hover:text-gold-400 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Terms</Link>
+            <Link href="/terms" className="text-gold-600 hover:text-gold-700 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Terms</Link>
           </p>
         </div>
       </div>

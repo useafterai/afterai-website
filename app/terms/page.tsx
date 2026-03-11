@@ -3,7 +3,7 @@ export default function TermsPage() {
     <div className="min-h-screen bg-dark p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
-        <div className="prose prose-invert max-w-none">
+        <div className="prose max-w-none">
           <p className="text-muted mb-6">
             Last updated: {new Date().toLocaleDateString()}
           </p>

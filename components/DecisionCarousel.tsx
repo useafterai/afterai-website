@@ -34,7 +34,7 @@ export default function DecisionCarousel() {
           aria-label="Decision flow carousel"
           onKeyDown={handleKeyDown}
           onScroll={handleScroll}
-          className="decision-carousel -mx-6 flex overflow-x-auto overscroll-x-contain px-6 pb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-dark md:-mx-4 md:gap-6 md:px-4 md:pb-4"
+          className="decision-carousel -mx-6 flex overflow-x-auto overscroll-x-contain px-6 pb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:-mx-4 md:gap-6 md:px-4 md:pb-4"
         >
           <BentoCard id="slide-ace" label="ACE (AI Change Event)" headline="The decision-worthy moment" copy="Pending (human attention) → confirmed (billable). Your change feed — not your hot path.">
             <ACEThumbnail />
@@ -50,27 +50,27 @@ export default function DecisionCarousel() {
         {/* Mobile: right-edge gradient peek + Swipe hint (disappears after first interaction) */}
         <div
           aria-hidden
-          className="pointer-events-none absolute right-0 top-0 bottom-2 w-12 bg-gradient-to-l from-dark/90 to-transparent md:hidden"
+          className="pointer-events-none absolute right-0 top-0 bottom-2 w-12 bg-gradient-to-l from-slate-50/90 to-transparent md:hidden"
         />
         {!hasInteracted && (
-          <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/15 bg-dark/90 px-3 py-1.5 text-xs text-white/70 backdrop-blur-sm md:hidden">
+          <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 rounded-full border border-slate-200 bg-white/90 px-3 py-1.5 text-xs text-slate-500 backdrop-blur-sm md:hidden">
             Swipe →
           </div>
         )}
       </div>
 
       {/* AIS transversal footer (beneath carousel) */}
-      <div className="mt-6 rounded-lg border border-white/[0.08] bg-white/[0.015] px-4 py-3" aria-hidden>
+      <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3" aria-hidden>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <div>
-            <span className="text-xs font-medium text-muted2/90">AIS (AI Indicator Signals)</span>
-            <p className="text-xs text-muted2/70 mt-0.5 max-w-xl">
+            <span className="text-xs font-medium text-muted2">AIS (AI Indicator Signals)</span>
+            <p className="text-xs text-muted2 mt-0.5 max-w-xl opacity-80">
               Continuous pre-decision signals that feed ACE, inform AURA, and are cited in PACR.
             </p>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {["drift", "regression", "disagreement", "staleness"].map((chip) => (
-              <span key={chip} className="px-2 py-0.5 text-[10px] rounded border border-white/[0.08] bg-white/[0.03] text-muted2/90">
+              <span key={chip} className="px-2 py-0.5 text-[10px] rounded border border-slate-200 bg-white text-muted2">
                 {chip}
               </span>
             ))}
@@ -99,21 +99,21 @@ function BentoCard({
   return (
     <div
       id={id}
-      className="decision-carousel-card bento-card group flex w-[85vw] min-w-[280px] shrink-0 flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:w-[min(420px,72vw)] md:min-w-[320px]"
+      className="decision-carousel-card bento-card group flex w-[85vw] min-w-[280px] shrink-0 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:w-[min(420px,72vw)] md:min-w-[320px]"
     >
       <div className="flex items-start justify-between gap-3 mb-3">
-        <span className="inline-flex px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-lg border border-white/10 bg-white/5 text-muted2 leading-tight">
+        <span className="inline-flex px-2.5 py-1 text-[10px] sm:text-xs font-semibold rounded-lg border border-slate-200 bg-slate-50 text-muted2 leading-tight">
           {label}
         </span>
         {badge && (
-          <span className="px-2 py-1 text-xs rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500 font-semibold flex-shrink-0">
+          <span className="px-2 py-1 text-xs rounded-full border border-gold-400/30 bg-gold-50 text-gold-600 font-semibold flex-shrink-0">
             {badge}
           </span>
         )}
       </div>
-      <h3 className="font-bold text-white mb-2">{headline}</h3>
+      <h3 className="font-bold text-slate-900 mb-2">{headline}</h3>
       <p className="text-sm text-muted leading-relaxed mb-4 line-clamp-3">{copy}</p>
-      <div className="rounded-xl border border-white/10 bg-dark/60 overflow-hidden max-h-[180px]">
+      <div className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden max-h-[180px]">
         {children}
       </div>
     </div>
@@ -129,13 +129,13 @@ function ACEThumbnail() {
     <div className="w-full p-3 space-y-2">
       <div className="text-[10px] font-semibold text-muted2 uppercase tracking-wide mb-2">Change Feed</div>
       {entries.map((e, i) => (
-        <div key={i} className="rounded-lg border border-white/10 bg-white/[0.04] p-2.5 space-y-2">
+        <div key={i} className="rounded-lg border border-slate-200 bg-white p-2.5 space-y-2">
           <div className="flex items-center justify-between gap-2">
-            <span className={`text-[10px] font-semibold ${e.status === "pending" ? "text-muted2" : "text-gold-500/90"}`}>{e.status}</span>
+            <span className={`text-[10px] font-semibold ${e.status === "pending" ? "text-muted2" : "text-gold-600"}`}>{e.status}</span>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {e.chips.map((c) => (
-              <span key={c} className="px-1.5 py-0.5 text-[9px] rounded bg-white/10 text-muted2">{c}</span>
+              <span key={c} className="px-1.5 py-0.5 text-[9px] rounded bg-slate-100 text-muted2">{c}</span>
             ))}
           </div>
         </div>
@@ -153,14 +153,14 @@ function AURAThumbnail() {
   return (
     <div className="w-full p-3">
       <div className="text-[10px] font-semibold text-muted2 uppercase tracking-wide mb-2">Delta</div>
-      <div className="rounded-lg border border-white/10 bg-white/[0.04] divide-y divide-white/10">
+      <div className="rounded-lg border border-slate-200 bg-white divide-y divide-slate-100">
         {metrics.map((m) => (
           <div key={m.label} className="flex items-center justify-between py-2 px-2 text-[10px] first:pt-2 last:pb-2">
             <span className="text-muted2">{m.label}</span>
             <div className="flex items-center gap-2 tabular-nums">
               <span className="text-muted line-through">{m.before}</span>
-              <span className="text-white font-medium">{m.after}</span>
-              <span className="text-gold-500/90 font-semibold">{m.delta}</span>
+              <span className="text-slate-900 font-medium">{m.after}</span>
+              <span className="text-gold-600 font-semibold">{m.delta}</span>
             </div>
           </div>
         ))}
@@ -174,7 +174,7 @@ function PACRThumbnail() {
   return (
     <div className="w-full p-3">
       <div className="text-[10px] font-semibold text-muted2 uppercase tracking-wide mb-2">Record preview</div>
-      <div className="rounded-lg border border-white/10 bg-white/[0.04] p-2.5 space-y-1.5">
+      <div className="rounded-lg border border-slate-200 bg-white p-2.5 space-y-1.5">
         {fields.map((f) => (
           <div key={f} className="flex justify-between text-[10px] py-0.5">
             <span className="text-muted2">{f}</span>

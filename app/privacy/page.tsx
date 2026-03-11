@@ -4,14 +4,14 @@ import Image from "next/image";
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-dark">
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-dark/55 border-b border-white/8">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
             <span className="text-xl font-bold">AfterAI</span>
           </Link>
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-muted hover:text-white transition-colors text-sm">
+            <Link href="/" className="text-muted hover:text-slate-900 transition-colors text-sm">
               Home
             </Link>
           </div>
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       </header>
       <div className="max-w-4xl mx-auto p-8">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        <div className="prose prose-invert max-w-none">
+        <div className="prose max-w-none">
           <p className="text-muted mb-6">
             Last updated: {new Date().toLocaleDateString()}
           </p>

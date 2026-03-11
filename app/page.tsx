@@ -9,28 +9,28 @@ export default function LandingPage() {
     <div className="min-h-screen bg-dark">
       {/* Background effects */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'180\' height=\'180\' filter=\'url(%23n)\' opacity=\'.22\'/%3E%3C/svg%3E')] opacity-20 mix-blend-overlay rotate-12" />
-        <div className="absolute -left-72 -top-72 h-[820px] w-[820px] rounded-full bg-gradient-radial from-purple-500/30 to-transparent blur-[70px] opacity-28 animate-float" />
-        <div className="absolute -right-80 top-32 h-[820px] w-[820px] rounded-full bg-gradient-radial from-gold-500/30 to-transparent blur-[70px] opacity-28 animate-float" style={{ animationDelay: "2s", animationDuration: "12s" }} />
-        <div className="absolute left-1/4 -bottom-[420px] h-[820px] w-[820px] rounded-full bg-gradient-radial from-purple-500/20 to-transparent blur-[70px] opacity-22 animate-float" style={{ animationDelay: "4s", animationDuration: "14s" }} />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'180\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'180\' height=\'180\' filter=\'url(%23n)\' opacity=\'.22\'/%3E%3C/svg%3E')] opacity-10 mix-blend-multiply rotate-12" />
+        <div className="absolute -left-72 -top-72 h-[820px] w-[820px] rounded-full bg-gradient-radial from-purple-500/20 to-transparent blur-[70px] opacity-60 animate-float" />
+        <div className="absolute -right-80 top-32 h-[820px] w-[820px] rounded-full bg-gradient-radial from-gold-500/20 to-transparent blur-[70px] opacity-60 animate-float" style={{ animationDelay: "2s", animationDuration: "12s" }} />
+        <div className="absolute left-1/4 -bottom-[420px] h-[820px] w-[820px] rounded-full bg-gradient-radial from-purple-500/15 to-transparent blur-[70px] opacity-50 animate-float" style={{ animationDelay: "4s", animationDuration: "14s" }} />
       </div>
 
       {/* Top Navigation */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-dark/55 border-b border-white/8">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
             <span className="text-xl font-bold">AfterAI</span>
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#product" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Product</Link>
-            <Link href="#pricing" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Pricing</Link>
-            <Link href="/faq" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">FAQ</Link>
-            <Link href="#docs" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Docs</Link>
-            <Link href="/cloud" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Cloud</Link>
-            <Link href="/security" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Security</Link>
-            <Link href="https://app.useafter.ai/login" className="text-muted hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Sign in</Link>
-            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-semibold hover:shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-dark">
+            <Link href="#product" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Product</Link>
+            <Link href="#pricing" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Pricing</Link>
+            <Link href="/faq" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">FAQ</Link>
+            <Link href="#docs" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Docs</Link>
+            <Link href="/cloud" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Cloud</Link>
+            <Link href="/security" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Security</Link>
+            <Link href="https://app.useafter.ai/login" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Sign in</Link>
+            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-semibold hover:shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
               Get started
             </Link>
           </div>
@@ -42,7 +42,7 @@ export default function LandingPage() {
         <section id="product" className="max-w-5xl mx-auto px-6 py-24 md:py-32 animate-fade-in-up section-with-anchor">
           <div className="text-center">
             <span className="section-heading-anchor block text-center mx-auto" aria-hidden="true" />
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/22 bg-gold-500/10 text-gold-500 text-xs font-bold mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-600 text-xs font-bold mb-6">
               <span>Monitor available now · More plans coming soon</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -54,14 +54,14 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/signup"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-bold text-lg hover:shadow-2xl transition-all flex items-center gap-2"
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold text-lg hover:shadow-2xl transition-all flex items-center gap-2"
               >
                 Get started
                 <FiArrowRight />
               </Link>
               <Link
                 href="/console-coming-soon"
-                className="px-8 py-4 rounded-xl border border-white/16 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all"
+                className="px-8 py-4 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all"
               >
                 See the console
               </Link>
@@ -70,7 +70,7 @@ export default function LandingPage() {
         </section>
 
         {/* 2. Problem framing */}
-        <section className="border-t border-white/8 bg-white/[0.02]">
+        <section className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Changes shouldn&apos;t be a leap of faith — neither should deciding not to change.</h2>
@@ -92,7 +92,7 @@ export default function LandingPage() {
         </section>
 
         {/* 3. Who it's for */}
-        <section className="border-t border-white/8">
+        <section className="border-t border-slate-200">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-6 motion-section-heading">Built for platform teams who own AI.</h2>
@@ -116,7 +116,7 @@ export default function LandingPage() {
         </section>
 
         {/* 4. Canonical flow — AIS → ACE → AURA → PACR */}
-        <section id="decision-moment" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="decision-moment" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-6xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <div className="motion-section-heading mb-10">
@@ -131,10 +131,10 @@ export default function LandingPage() {
         </section>
 
         {/* 5. How it works / architecture */}
-        <section id="docs" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="docs" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
-          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 md:p-12">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-12 shadow-sm">
             <h2 className="text-2xl font-bold mb-4 motion-section-heading">Built for evidence, not your hot path.</h2>
             <div className="motion-section-content">
             <p className="text-muted leading-relaxed mb-8 max-w-2xl">
@@ -145,9 +145,9 @@ export default function LandingPage() {
               <PillItem label="No hot-path traffic logging" desc="Controlled, offline evaluations only" />
               <PillItem label="Provider-neutral, out-of-band" desc="Fail-open; no proxy, no routing" />
             </div>
-            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
+            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-slate-200">
               <div>
-                <h3 className="text-sm font-semibold text-muted2 uppercase tracking-wide mb-3">Before AfterAI</h3>
+                <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Before AfterAI</h3>
                 <ul className="space-y-2 text-sm text-muted">
                   <li>Slack threads and screenshots</li>
                   <li>Metrics without context</li>
@@ -156,7 +156,7 @@ export default function LandingPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gold-500 uppercase tracking-wide mb-3">With AfterAI</h3>
+                <h3 className="text-sm font-semibold text-gold-600 uppercase tracking-wide mb-3">With AfterAI</h3>
                 <ul className="space-y-2 text-sm text-muted">
                   <li>Explicit AI Change Events (ACE)</li>
                   <li>Measured upgrade risk (AURA)</li>
@@ -174,7 +174,7 @@ export default function LandingPage() {
         <PricingSection />
 
         {/* Cloud — Azure, AWS, GCP blurb + link to /cloud */}
-        <section id="cloud" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="cloud" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-3 motion-section-heading">One platform for Azure, AWS, and GCP.</h2>
@@ -192,7 +192,7 @@ export default function LandingPage() {
                 <Image src="/assets/gcp.png" alt="Google Cloud" width={140} height={40} className="max-h-10 w-auto object-contain" />
               </div>
             </div>
-            <Link href="/cloud" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/16 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all motion-section-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark">
+            <Link href="/cloud" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all motion-section-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
               Cloud providers
               <FiArrowRight />
             </Link>
@@ -200,7 +200,7 @@ export default function LandingPage() {
         </section>
 
         {/* FAQ — first 4 + Why DIY + link to full FAQ */}
-        <section id="faq" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="faq" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-8 motion-section-heading">FAQ</h2>
@@ -237,7 +237,7 @@ export default function LandingPage() {
               </details>
             </div>
             <p className="mt-6 motion-section-content">
-              <Link href="/faq" className="text-sm font-medium text-gold-500 hover:text-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+              <Link href="/faq" className="text-sm font-medium text-gold-600 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
                 See a full list of FAQ →
               </Link>
             </p>
@@ -245,7 +245,7 @@ export default function LandingPage() {
         </section>
 
         {/* 8. Trust & coming-soon */}
-        <section id="trust" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="trust" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl font-bold mb-4 motion-section-heading">Early access, real product.</h2>
@@ -259,12 +259,12 @@ export default function LandingPage() {
               <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> See how often AI is actually changing</li>
               <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> Run a preview AURA on a real upgrade</li>
             </ul>
-            <p className="text-sm text-muted2 mb-6">No credit card required for Monitor. Provider-neutral — bring your own models and pipelines. Security is built in — same posture whether you use the console, API, or SDK. <Link href="/security" className="text-gold-500 hover:text-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded font-medium">Security overview →</Link></p>
+            <p className="text-sm text-muted2 mb-6">No credit card required for Monitor. Provider-neutral — bring your own models and pipelines. Security is built in — same posture whether you use the console, API, or SDK. <Link href="/security" className="text-gold-600 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded font-medium">Security overview →</Link></p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/signup" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-bold hover:shadow-lg transition-all">
+              <Link href="/signup" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all">
                 Get started free
               </Link>
-              <Link href="/console-coming-soon" className="px-6 py-3 rounded-xl border border-white/16 bg-white/5 text-white font-semibold hover:bg-white/8 transition-all">
+              <Link href="/console-coming-soon" className="px-6 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all">
                 Request a demo
               </Link>
             </div>
@@ -273,7 +273,7 @@ export default function LandingPage() {
         </section>
 
         {/* Security */}
-        <section id="security" className="border-t border-white/8 bg-white/[0.02]">
+        <section id="security" className="border-t border-slate-200 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
             <span className="section-heading-anchor" aria-hidden="true" />
             <h2 className="text-2xl md:text-3xl font-bold mb-4 motion-section-heading">Security built for teams.</h2>
@@ -284,7 +284,7 @@ export default function LandingPage() {
             <p className="text-muted leading-relaxed mb-6 max-w-2xl">
               We never sit in your inference path; telemetry is out-of-band and designed to fail open.
             </p>
-            <Link href="/security" className="inline-flex items-center gap-2 text-gold-500 font-semibold hover:text-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">
+            <Link href="/security" className="inline-flex items-center gap-2 text-gold-600 font-semibold hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">
               Security overview
               <FiArrowRight />
             </Link>
@@ -295,14 +295,14 @@ export default function LandingPage() {
       </main>
 
       {/* 9. Footer */}
-      <footer className="border-t border-white/8 py-8">
+      <footer className="border-t border-slate-200 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-muted2">
           <span>© {new Date().getFullYear()} AfterAI</span>
           <div className="flex items-center gap-6">
-            <Link href="/cloud" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Cloud</Link>
-            <Link href="/security" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Security</Link>
-            <Link href="/privacy" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Privacy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-dark rounded">Terms</Link>
+            <Link href="/cloud" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Cloud</Link>
+            <Link href="/security" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Security</Link>
+            <Link href="/privacy" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Privacy</Link>
+            <Link href="/terms" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Terms</Link>
           </div>
         </div>
       </footer>
@@ -312,10 +312,9 @@ export default function LandingPage() {
 
 function PillItem({ label, desc }: { label: string; desc: string }) {
   return (
-    <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/8 transition-all duration-200 hover:border-white/14 hover:bg-white/[0.07]">
-      <span className="text-sm font-semibold text-white flex-shrink-0">{label}</span>
+    <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 transition-all duration-200 hover:border-slate-300 hover:shadow-sm">
+      <span className="text-sm font-semibold text-slate-900 flex-shrink-0">{label}</span>
       <span className="text-sm text-muted2">{desc}</span>
     </div>
   );
 }
-

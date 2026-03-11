@@ -26,19 +26,19 @@ function VerifyContent() {
           </Link>
         </div>
 
-        <div className="p-8 rounded-2xl border border-white/14 bg-gradient-to-b from-white/8 to-white/4 backdrop-blur-xl text-center">
-          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold-500/20 flex items-center justify-center">
-            <FiMail className="w-8 h-8 text-gold-500" />
+        <div className="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm text-center">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gold-100 flex items-center justify-center">
+            <FiMail className="w-8 h-8 text-gold-600" />
           </div>
 
           <h1 className="text-2xl font-bold mb-3">Verify your email</h1>
           <p className="text-muted mb-8">
-            We sent a verification link to <span className="text-white font-semibold">{email}</span>. Once verified, sign in to continue.
+            We sent a verification link to <span className="text-slate-900 font-semibold">{email}</span>. Once verified, sign in to continue.
           </p>
 
           <Link
             href="https://app.useafter.ai/login"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-dark font-bold hover:shadow-lg transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all"
           >
             <FiArrowLeft />
             Back to Sign in
