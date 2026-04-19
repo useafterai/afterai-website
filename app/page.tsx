@@ -84,9 +84,36 @@ export default function LandingPage() {
               <p className="text-muted leading-relaxed max-w-3xl">
                 AfterAI turns AI change — and no-change — into measurable upgrade risk and a durable decision trail, so platform teams and leadership can move or deliberately not move with confidence.
               </p>
-              <p className="text-sm text-muted2 italic max-w-2xl">
-                With faster model releases, provider deprecations, and agentic systems, AI change is continuous — but approvals, deferrals, and accountability haven&apos;t caught up.
-              </p>
+              {/* Root causes */}
+              <div className="pt-2 grid sm:grid-cols-2 gap-4 max-w-3xl">
+                <div className="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                  <p className="text-sm font-semibold text-slate-900 mb-1">Continuous Change Velocity</p>
+                  <p className="text-sm text-muted2">Faster model releases, provider deprecations, and agentic systems create constant pressure.</p>
+                </div>
+                <div className="p-4 rounded-xl border border-slate-200 bg-slate-50">
+                  <p className="text-sm font-semibold text-slate-900 mb-1">Accountability Gap</p>
+                  <p className="text-sm text-muted2">Approvals, deferrals, and governance haven&apos;t caught up to the speed of AI.</p>
+                </div>
+              </div>
+
+              {/* Structural tailwinds */}
+              <div className="pt-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Why this keeps getting harder</p>
+                <div className="grid sm:grid-cols-3 gap-3 max-w-3xl">
+                  <div className="p-3 rounded-lg border border-amber-200 bg-amber-50">
+                    <p className="text-sm font-semibold text-amber-800 mb-1">Model Lifetimes Shrinking</p>
+                    <p className="text-xs text-amber-700">Frontier labs ship breaking changes quarterly. Providers deprecate faster than enterprises can evaluate.</p>
+                  </div>
+                  <div className="p-3 rounded-lg border border-amber-200 bg-amber-50">
+                    <p className="text-sm font-semibold text-amber-800 mb-1">Reputation Risk</p>
+                    <p className="text-xs text-amber-700">AI mistakes are increasingly business-visible. &quot;Trust me&quot; evals are no longer acceptable.</p>
+                  </div>
+                  <div className="p-3 rounded-lg border border-amber-200 bg-amber-50">
+                    <p className="text-sm font-semibold text-amber-800 mb-1">Governance Gap</p>
+                    <p className="text-xs text-amber-700">Compliance pressure rising after deployment. MLOps tools stop at metrics, not decisions.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -111,6 +138,54 @@ export default function LandingPage() {
                 <span>Organizations that need a clear, defensible answer when leadership asks what changed and why.</span>
               </li>
             </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* 3b. Before / After — standalone transformation */}
+        <section className="border-t border-slate-200 bg-white">
+          <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
+            <span className="section-heading-anchor" aria-hidden="true" />
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 motion-section-heading">From gut feel to evidence.</h2>
+            <p className="text-muted leading-relaxed max-w-2xl mb-8 motion-section-content">
+              AfterAI replaces the informal change processes most teams are running today.
+            </p>
+            <div className="motion-section-content grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+              <div className="bg-slate-50 p-8 md:border-r border-b md:border-b-0 border-slate-200">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-5">Before AfterAI</h3>
+                <ul className="space-y-4">
+                  {([
+                    { label: "Slack threads and screenshots", sub: "Evidence lives in chat, then disappears" },
+                    { label: "Metrics without context", sub: "Numbers, but no decision record" },
+                    { label: "\u201cIt seemed fine\u201d approvals", sub: "Undocumented judgment calls" },
+                    { label: "No durable record", sub: "Can't reconstruct why it shipped" },
+                  ] as const).map((item) => (
+                    <li key={item.label} className="flex flex-col gap-0.5">
+                      <span className="text-sm font-medium text-slate-500 line-through decoration-slate-300">{item.label}</span>
+                      <span className="text-xs text-slate-400">{item.sub}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white p-8">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-gold-500 mb-5">With AfterAI</h3>
+                <ul className="space-y-4">
+                  {([
+                    { label: "Explicit AI Change Events (ACE)", sub: "Every change is captured and categorized" },
+                    { label: "Confidence-weighted deltas", sub: "Risk is measured, not assumed" },
+                    { label: "Measured upgrade risk (AURA)", sub: "Evidence-backed approval or deferral" },
+                    { label: "Defensible decision trail (PACR)", sub: "Immutable record of who decided and why" },
+                  ] as const).map((item) => (
+                    <li key={item.label} className="flex gap-3 items-start">
+                      <FiCheck className="mt-0.5 text-gold-500 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-slate-900">{item.label}</p>
+                        <p className="text-xs text-muted2">{item.sub}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -140,33 +215,40 @@ export default function LandingPage() {
             <p className="text-muted leading-relaxed mb-8 max-w-2xl">
               AfterAI uses confidence-weighted deltas, works with any provider, and never sits in front of your inference. No inference-path instrumentation, no hot-path traffic logging — controlled, offline evaluations only. Capture change and risk out-of-band; zero impact on latency.
             </p>
-            <div className="flex flex-col sm:flex-row md:flex-wrap gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row md:flex-wrap gap-4">
               <PillItem label="No inference-path instrumentation" desc="Never in front of your inference" />
               <PillItem label="No hot-path traffic logging" desc="Controlled, offline evaluations only" />
               <PillItem label="Provider-neutral, out-of-band" desc="Fail-open; no proxy, no routing" />
             </div>
-            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-slate-200">
-              <div>
-                <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Before AfterAI</h3>
-                <ul className="space-y-2 text-sm text-muted">
-                  <li>Slack threads and screenshots</li>
-                  <li>Metrics without context</li>
-                  <li>&quot;It seemed fine&quot; approvals</li>
-                  <li>No durable record</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gold-600 uppercase tracking-wide mb-3">With AfterAI</h3>
-                <ul className="space-y-2 text-sm text-muted">
-                  <li>Explicit AI Change Events (ACE)</li>
-                  <li>Measured upgrade risk (AURA)</li>
-                  <li>Confidence-weighted deltas</li>
-                  <li>Defensible decision trail</li>
-                </ul>
-              </div>
-            </div>
             </div>
           </div>
+          </div>
+        </section>
+
+        {/* 6b. Why AfterAI */}
+        <section className="border-t border-slate-200 bg-white">
+          <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 section-with-anchor">
+            <span className="section-heading-anchor" aria-hidden="true" />
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 motion-section-heading">Why AfterAI</h2>
+            <p className="text-muted leading-relaxed max-w-2xl mb-8 motion-section-content">
+              There are other approaches. Here&apos;s how they compare.
+            </p>
+            <div className="motion-section-content grid md:grid-cols-2 gap-6 mb-6">
+              <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">vs. Eval tools</p>
+                <p className="text-sm font-semibold text-slate-900 mb-3">Raw metrics → approval decisions + trade-offs</p>
+                <p className="text-sm text-muted2">Eval tools tell you which model performed better. AfterAI tells you whether a change should be approved, what the trade-offs are, and who approved it — preserved over time.</p>
+              </div>
+              <div className="p-6 rounded-xl border border-slate-200 bg-slate-50">
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">vs. DIY pipelines</p>
+                <p className="text-sm font-semibold text-slate-900 mb-3">Build + maintain → canonical flow, zero maintenance</p>
+                <p className="text-sm text-muted2">Building in-house means owning eval pipelines, escalation logic, and audit trails. AfterAI gives you a standardized AIS → ACE → AURA → PACR flow without owning the full stack.</p>
+              </div>
+            </div>
+            <div className="motion-section-content p-5 rounded-xl border border-dashed border-slate-300 bg-white max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">What AfterAI is not</p>
+              <p className="text-sm text-muted2">Not prompt tuning, model routing, or automatic switching. Not request-level observability or inference tracing. AfterAI operates at the change level — it&apos;s about decisions, not requests.</p>
+            </div>
           </div>
         </section>
 
