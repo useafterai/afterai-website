@@ -79,22 +79,22 @@ export default function CloudPage() {
               name="Microsoft Azure"
               logoSrc="/assets/azure.png"
               logoAlt="Microsoft Azure"
-              telemetry="Azure Monitor metrics"
-              detail="afterai-export-azure-monitor — resource-id, subscription-id, tenant-id. source.csp_telemetry: azure.monitor.metrics"
+              telemetry="Azure Monitor · Azure OpenAI Service"
+              detail="Full telemetry ingest and provenance tracking for Azure OpenAI Service. Foundry OAuth, auto-discovery, and zero-input project selection."
             />
             <ProviderCard
               name="Amazon Web Services"
               logoSrc="/assets/aws.png"
               logoAlt="Amazon Web Services"
-              telemetry="AWS CloudWatch metrics"
-              detail="afterai-export-cloudwatch — region, resource-id, account-id. source.csp_telemetry: aws.cloudwatch.metrics"
+              telemetry="CloudWatch · Bedrock · SageMaker"
+              detail="Seamless integration with Bedrock and SageMaker pipelines. CloudWatch metrics with full CSP provenance stamped on every signal."
             />
             <ProviderCard
               name="Google Cloud"
               logoSrc="/assets/gcp.png"
               logoAlt="Google Cloud"
-              telemetry="GCP Cloud Monitoring"
-              detail="afterai-export-gcp-monitoring — project-id, resource-id. source.csp_telemetry: gcp.monitoring.metrics"
+              telemetry="Cloud Monitoring · Vertex AI"
+              detail="Native support for Vertex AI model evaluation and monitoring. GCP Cloud Monitoring with project-level provenance capture."
             />
           </div>
         </section>
