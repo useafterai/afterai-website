@@ -260,7 +260,7 @@ export default function PricingSection() {
                   items: [
                     "30 ACEs / month",
                     "Unlimited AIS signals",
-                    "Up to 3 AI agents",
+                    "Up to 10 AI agents",
                   ],
                 },
                 {

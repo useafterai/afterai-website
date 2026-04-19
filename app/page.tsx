@@ -251,13 +251,13 @@ export default function LandingPage() {
             <h2 className="text-2xl font-bold mb-4 motion-section-heading">Early access, real product.</h2>
             <div className="motion-section-content">
             <p className="text-muted leading-relaxed mb-6 max-w-2xl">
-              AfterAI is in early access. Monitor is live — sign up, capture AI Change Events, and run a preview AURA on a real upgrade. We&apos;re building Assess and Enterprise with platform teams like yours.
+              AfterAI is in early access. Monitor is live — sign up, capture AI Change Events, and run a Lite AURA on a real upgrade. We&apos;re building Assess and Enterprise with platform teams like yours.
             </p>
             <ul className="space-y-2 text-muted mb-6">
               <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> Connect your first system</li>
               <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> Capture AI Change Events (ACE)</li>
               <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> See how often AI is actually changing</li>
-              <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> Run a preview AURA on a real upgrade</li>
+              <li className="flex items-center gap-2"><FiCheck className="text-gold-500 flex-shrink-0" /> Run a Lite AURA on a real upgrade</li>
             </ul>
             <p className="text-sm text-muted2 mb-6">No credit card required for Monitor. Provider-neutral — bring your own models and pipelines. Security is built in — same posture whether you use the console, API, or SDK. <Link href="/security" className="text-gold-600 hover:text-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded font-medium">Security overview →</Link></p>
             <div className="flex flex-wrap gap-4">
