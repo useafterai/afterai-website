@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FiArrowRight, FiCheck, FiShield } from "react-icons/fi";
 import PricingSection from "@/components/PricingSection";
 import DecisionCarousel from "@/components/DecisionCarousel";
+import NavHeader from "@/components/NavHeader";
 
 export default function LandingPage() {
   return (
@@ -15,27 +16,7 @@ export default function LandingPage() {
         <div className="absolute left-1/4 -bottom-[420px] h-[820px] w-[820px] rounded-full bg-gradient-radial from-purple-500/15 to-transparent blur-[70px] opacity-50 animate-float" style={{ animationDelay: "4s", animationDuration: "14s" }} />
       </div>
 
-      {/* Top Navigation */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="AfterAI" width={28} height={28} className="h-7 w-auto" />
-            <span className="text-xl font-bold">AfterAI</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#product" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Product</Link>
-            <Link href="#pricing" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Pricing</Link>
-            <Link href="/faq" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">FAQ</Link>
-            <Link href="#docs" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Docs</Link>
-            <Link href="/cloud" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Cloud</Link>
-            <Link href="/security" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Security</Link>
-            <Link href="https://app.useafter.ai/login" className="text-muted hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Sign in</Link>
-            <Link href="/signup" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-gold-500 text-white font-semibold hover:shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
-              Get started
-            </Link>
-          </div>
-        </nav>
-      </header>
+      <NavHeader />
 
       <main className="relative">
         {/* 1. Hero — split layout */}
@@ -44,6 +25,7 @@ export default function LandingPage() {
             {/* Left: copy */}
             <div className="text-center lg:text-left">
               <span className="section-heading-anchor block lg:inline-block" aria-hidden="true" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-3">Decision Grade AI Change Intelligence</p>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-600 text-xs font-bold mb-6">
                 <span>Monitor available now · More plans coming soon</span>
               </div>
@@ -63,7 +45,7 @@ export default function LandingPage() {
                   <FiArrowRight />
                 </Link>
                 <Link
-                  href="/console-coming-soon"
+                  href="https://app.useafter.ai/login"
                   className="px-8 py-4 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all"
                 >
                   See the console
@@ -71,7 +53,7 @@ export default function LandingPage() {
               </div>
             </div>
             {/* Right: product mock */}
-            <div className="hidden lg:block">
+            <div className="lg:block">
               <ProductMock />
             </div>
           </div>
@@ -402,7 +384,7 @@ export default function LandingPage() {
                 <Link href="/signup" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-gold-500 text-white font-bold hover:shadow-lg transition-all">
                   Get started free
                 </Link>
-                <Link href="/console-coming-soon" className="px-6 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all">
+                <Link href="/contact" className="px-6 py-3 rounded-xl border border-slate-300 bg-white text-slate-800 font-semibold hover:bg-slate-50 transition-all">
                   Request a demo
                 </Link>
               </div>
@@ -433,14 +415,43 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-muted2">
-          <span>© {new Date().getFullYear()} AfterAI</span>
-          <div className="flex items-center gap-6">
-            <Link href="/cloud" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Cloud</Link>
-            <Link href="/security" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Security</Link>
-            <Link href="/privacy" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Privacy</Link>
-            <Link href="/terms" className="hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded">Terms</Link>
+      <footer className="border-t border-slate-200 bg-white py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid sm:grid-cols-[1fr_auto_auto] gap-10 sm:gap-16 mb-10">
+            {/* Brand */}
+            <div>
+              <Link href="/" className="flex items-center gap-2.5 mb-3">
+                <Image src="/logo.png" alt="AfterAI" width={22} height={22} className="h-5.5 w-auto" />
+                <span className="font-bold text-slate-900">AfterAI</span>
+              </Link>
+              <p className="text-sm text-muted2 max-w-xs leading-relaxed">
+                Decision-grade AI change intelligence — without touching your inference path.
+              </p>
+            </div>
+            {/* Product */}
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Product</p>
+              <ul className="space-y-2.5 text-sm text-muted2">
+                <li><Link href="/#product" className="hover:text-slate-900 transition-colors">Overview</Link></li>
+                <li><Link href="/#pricing" className="hover:text-slate-900 transition-colors">Pricing</Link></li>
+                <li><Link href="/cloud" className="hover:text-slate-900 transition-colors">Cloud providers</Link></li>
+                <li><Link href="/security" className="hover:text-slate-900 transition-colors">Security</Link></li>
+                <li><Link href="https://app.useafter.ai/login" className="hover:text-slate-900 transition-colors">Console</Link></li>
+              </ul>
+            </div>
+            {/* Company */}
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Company</p>
+              <ul className="space-y-2.5 text-sm text-muted2">
+                <li><Link href="/faq" className="hover:text-slate-900 transition-colors">FAQ</Link></li>
+                <li><Link href="/contact" className="hover:text-slate-900 transition-colors">Contact</Link></li>
+                <li><Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</Link></li>
+                <li><Link href="/terms" className="hover:text-slate-900 transition-colors">Terms</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-100 pt-6 text-xs text-muted2">
+            © {new Date().getFullYear()} AfterAI. All rights reserved.
           </div>
         </div>
       </footer>
