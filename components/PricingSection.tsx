@@ -198,7 +198,7 @@ export default function PricingSection() {
               tagline="See AI agents change early."
               envPill="non-prod"
               bullets={[
-                "Unlimited AI Indicator Signals (AIS)",
+                "AI model deprecation tracking",
                 "Light AI change visibility",
                 "1 Lite AURA / month",
               ]}
@@ -207,8 +207,7 @@ export default function PricingSection() {
                   heading: "Usage & limits",
                   items: [
                     "10 ACE events / month",
-                    "Unlimited AIS signals",
-                    "3 AI agents",
+                    "1 AI system",
                   ],
                 },
                 {
@@ -243,8 +242,8 @@ export default function PricingSection() {
               envPill="prod and non-prod"
               bullets={[
                 "Everything in Monitor, plus",
+                "Unlimited AI Indicator Signals (AIS)",
                 "Up to 6 AURAs / month",
-                "Exportable results + advanced analytics",
               ]}
               expandedGroups={[
                 {
@@ -260,7 +259,7 @@ export default function PricingSection() {
                   items: [
                     "30 ACEs / month",
                     "Unlimited AIS signals",
-                    "Up to 10 AI agents",
+                    "Up to 5 AI systems",
                   ],
                 },
                 {
@@ -316,7 +315,7 @@ export default function PricingSection() {
                   items: [
                     "400 ACEs / month",
                     "80 AURA runs / month",
-                    "Up to 20 AI agents",
+                    "Up to 20 AI systems",
                   ],
                 },
                 {
