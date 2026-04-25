@@ -198,11 +198,20 @@ export default function PricingSection() {
               tagline="See AI agents change early."
               envPill="non-prod"
               bullets={[
-                "AI model deprecation tracking",
+                "Model Watchlist — 15 providers, email alerts",
                 "Light AI change visibility",
                 "1 Lite AURA / month",
               ]}
               expandedGroups={[
+                {
+                  heading: "Model Watchlist",
+                  items: [
+                    "15 providers: OpenAI, Anthropic, Google, Azure OpenAI, Amazon Bedrock, Mistral, Cohere, xAI, DeepSeek, Meta, Qwen, Kimi, MiniMax, NVIDIA NIM, and more",
+                    "Email alert when a watched model announces deprecation",
+                    "Email alert when a successor model releases in the same family",
+                    "No connection required — available on signup",
+                  ],
+                },
                 {
                   heading: "Usage & limits",
                   items: [

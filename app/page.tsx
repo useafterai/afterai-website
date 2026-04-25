@@ -356,6 +356,14 @@ export default function LandingPage() {
               <p className="text-muted leading-relaxed mb-8 max-w-2xl">
                 Monitor is live. Start capturing decision-grade evidence for your AI systems today.
               </p>
+
+              {/* Watchlist zero-setup callout */}
+              <div className="mb-8 max-w-md p-4 rounded-xl border border-gold-300/50 bg-gradient-to-br from-gold-50 to-white">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gold-600 mb-1">No setup required</p>
+                <p className="text-sm font-semibold text-slate-900 mb-1">Start with the Model Watchlist</p>
+                <p className="text-sm text-muted2">Pick models from 15 providers — OpenAI, Anthropic, Google, Azure OpenAI, DeepSeek, and more. Get emailed when a model you&apos;re watching announces deprecation or a successor releases. Works the moment you sign up.</p>
+              </div>
+
               <ol className="space-y-5 mb-8 max-w-md">
                 <li className="flex items-start gap-4">
                   <span className="flex-shrink-0 w-7 h-7 rounded-full border-2 border-gold-400 bg-gold-50 text-gold-600 text-xs font-bold flex items-center justify-center">1</span>
